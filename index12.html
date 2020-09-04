@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // var i=1;
+    // while (i<=20){
+    //     document.write(i + "<br />");
+    //     i++;
+    // }
+
+        // var i=1;
+        // do{
+        //     document.write(i + "<br />");
+        //     i++;
+        // }
+        // while(i<=20)
+     var names = ["ali" , "hamed" , "mohamad" , "naser"];
+     var i=0;
+     while(names[i]){
+         document.write(names[i] + "<br />");
+         i++;
+     }
+//در شماره 5 از حلقه خارج می شود
+     for( i=0 ; i<20 ; i++ ){
+         if(i===5){
+             break;
+         }
+         document.write(i + "<br />");
+     }
+//فقط 5و10را نمایش نمی دهد
+     for( i=0 ; i<20 ; i++ ){
+         if(i===5 || i===10){
+             continue;
+         }
+         document.write(i + "<br />");
+     }
+
+</script>
+
+</html>

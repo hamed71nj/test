@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حلقه ها</title>
+</head>
+<body>
+    <h2 id="result">result</h2>
+</body>
+
+<script>
+
+    var names = ["ali" , "hamed" , "mohamad" , "naser"];
+    var element = document.getElementById("result");
+    var text = "";
+
+    for(var i=0 ; i<names.length ; i++ ){
+        text+=names[i] + "<br />" ;//دقت شود
+    }
+    element.innerHTML = text;
+
+    // var i;
+    // for(i=0; i<5 ; i++){
+    //     alert(i);
+    // }
+
+    for( n in names){
+        alert( names[n]);
+    }
+
+</script>
+
+</html>

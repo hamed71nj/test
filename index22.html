@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انیمیشن</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="ali">hamed</h2>
+    <img id="img" />
+    <hr />
+    <button type="button" onclick="myMove()">click me!</button>
+    <br /><br />
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+</body>
+<script>//تنظیم تصویر
+    document.getElementById('img').src = "file:///F:/تقویم%20و%20زمان%20سنج/taghvim99-wallpaper/taghvim99-1.jpg";
+    // document.getElementById('img').style.width="20%";
+    document.getElementById('img').style.width = "150px";
+    document.getElementsByClassName('ali')[0].style.color = "red";
+
+    function myMove() {//انیمیشین
+        var elem = document.getElementById('animate');
+        var pos = 0;
+        var id = setInterval(form, 5);
+        function form() {
+            if (pos == 350) {
+                clearInterval(id);
+            }
+            else {
+                pos++;
+                elem.style.top = pos + "px";
+                elem.style.left = pos + "px";
+            }
+        }
+    }
+
+    (function(){//تغغیر تصویر
+        var time = 0;
+        var timeid = setInterval(change, 5000);
+        function change(){
+            document.getElementById('img').src = "file:///F:/تقویم%20و%20زمان%20سنج/taghvim99-wallpaper/taghvim99-6.jpg";
+            clearInterval(timeid);
+        }
+    })();
+
+</script>
+
+</html>

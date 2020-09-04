@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورودی توابع</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function sum(x,y){
+        if(x===undefined){
+            x=0;
+        }
+        if(y===undefined){
+            y=0;
+        }
+        return x + y;
+    }
+    var a1= sum(2);
+    console.log(a1);
+
+    function sum2(a=0 ,b=0 ){
+        return a + b;
+    }
+    var c1= sum2(3);
+    console.log(c1);
+
+    function myfunction(){//برای زمانی که از تعداد آرگومان ها خبری نداریم
+        for(var i=0 ; i<arguments.length ; i++ ){
+            console.log(arguments[i]);
+        }
+    }
+    myfunction(3 , "ali" , true , 234);
+
+    function add(){
+        var counter = 0;
+        function plus(){
+            counter+=1;
+        }
+        plus();
+        plus();
+        plus();
+        return counter;
+    }
+    console.log(add());
+
+</script>
+</html>

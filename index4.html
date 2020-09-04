@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    var names = ["ali", "javad", "hamed", "boz"];//نوع اول آرایه
+    //alert("names");
+    document.write(names.length);//طول آرایه
+    document.write("<br />");
+    document.write(names[0]);//اولین عنصر آرایه را نشان می دهد
+
+    var myarray = new Array("javad", "ali", "goli");//نوع دوم آرایه
+
+    names[1] = "mohamad";//تغییر یک عنصر آرایه
+    document.write("<br />");
+    document.write(names[1]);
+    document.write("<br />");
+
+    var person = ["ali", "nj", 10];//نگهداری اطلاعات شخص
+    document.write("name is: " + person[0] + "   family is:  " + person[1]);
+
+    document.write("<br />");
+    var name2 = names.sort();
+    console.log(name2);
+
+    document.write("<br />");
+    var name3 = myarray.sort();
+    console.log(name3);
+
+</script>
+
+</html>

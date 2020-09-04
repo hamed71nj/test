@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var person = {
+        firstName : "hamed",
+        lastName : "nojavan",
+        fullName : function(){
+            return this.firstName + " " + this.lastName;
+            
+        }
+        
+    };
+    alert(person.fullName());
+</script>
+</html>

@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+        نام : <input type="text" id="fname" />
+        <input type="button"  value="submit" onclick="myfunction()" />
+        <p id="p11" style="color: red;"></p>
+   
+   
+</body>
+<script>
+    function myfunction() {
+        var x,text;
+        x = document.getElementById('fname').value;
+
+       if(x<1 || x>30 || isNaN(x) ){
+        text = "input not valid";
+        document.getElementById('p11').innerHTML = text;
+       }
+       else{
+           text = "input ok";
+           document.getElementById('p11').innerHTML = text;
+           document.getElementById('p11').style.color="green";
+
+
+       }
+    }
+</script>
+
+</html>

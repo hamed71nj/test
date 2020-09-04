@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سازنده constructor</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+</body>
+
+<script>
+
+    function person(name, family, age) {
+        this.name = name;
+        this.family = family;
+        this.age = age;
+        this.fullname = function(){//تعریف تابع درون سازنده
+            return this.name +"  "+ this.family;
+        }
+
+    }
+   
+    var Ali = new person("ali", "nj", 10);
+    Ali.carname = "pride";
+    console.log(Ali);
+    console.log(Ali.fullname());//فراخوانی تابع درون person
+
+
+
+    var people = [];
+    people.push(new person("hamed", "nj", 30));
+    people.push(new person("javad", "vdf", 20));
+    people.push(new person("goli", "baharie", 40));
+    people.push(new person("saeed", "alizadeh", 55));
+    console.log(people);
+
+    var text = ""
+
+    for (x in people) {
+        text += people[x].name + " " + people[x].family + "  " + "->" + people[x].age + "<br />";
+    }
+
+
+    document.getElementById('demo').innerHTML = text;
+
+</script>
+
+</html>

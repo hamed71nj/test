@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="lbl">result</h2>
+    <button onclick="showdate()">click me !</button><br />
+    <input type="text" onchange="changinput(this.value)" />
+</body>
+
+<script>
+
+    function showdate() {
+        document.getElementById('lbl').innerHTML = Date();
+    }
+    function changinput(value) {
+        document.getElementById('lbl').innerHTML = value;
+    }
+
+</script>
+
+</html>

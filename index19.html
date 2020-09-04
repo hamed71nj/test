@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انواع توابع</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function myfunction(){
+        var a,b,c;
+        a=10;
+        b=20;
+        c= a * b;
+        
+        alert(c);
+    }
+    myfunction();//تا زمانی که این تابع فراخوانی نشود الیرت بالا اجرا نمی شود.
+
+    //مثال دوم
+    var x = function(a,b){return a+b };//ابتدا ایکس را یک تابع در نظر می گیریم
+    var d = x(5 , 9);//به جای کل تابع بالا فقط ایکس را فراخوانی می کنیم
+    console.log(d);
+
+    //مثال سوم
+    var my =new Function("a" , "b" , "return a+b");//این روش زیاد خوب نیست!!
+    var a1 = my(1,3);
+    console.log(a1);
+
+    //مثال چهارم
+    (function(){//این توابع خودشان اجرا می شوند و نیازی به فراخوانی ندارند
+        alert('loded....')
+    })();
+
+    //مثال پنجم
+    function sum(a,b){
+        return a+b;
+    }
+    var c1= sum(2,5) * 2;
+    console.log(c1.toString()+2);//tostringدیگر به رشته تبدیل شد
+
+    //مثال ششم
+    var sum2= (a,b) => a+b;
+   // var n1= sum2(7,8);
+   // console.log(n1);
+   alert(sum2(3,5));
+
+   //مثال هفتم
+   const sum3= (x,y) => {return x*y};
+   alert(sum3(2,5));
+
+
+</script>
+
+</html>

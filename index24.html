@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کنترل کلیک</title>
+</head>
+
+<body>
+    <button id="mybtn">try it</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+</body>
+<!--مثال اول -->
+<!-- <script>
+    document.getElementById('mybtn').addEventListener("click", function () {
+        alert('hello ali');
+    })
+</script> -->
+<!--پایان مثال اول-->
+
+
+<!--مثال دوم-->
+<!-- <script>
+    var x = document.getElementById('mybtn');
+    x.addEventListener("click",hiuser);
+    x.addEventListener("click",somefunction);
+    
+    function hiuser(){
+        alert('hello ali nj');
+    }
+
+    function somefunction(){
+        alert('سلام برادر بز');
+    }
+</script> -->
+<!--پایان مثال دوم-->
+
+<script>
+    // //مثال سوم
+    // var x = document.getElementById('mybtn');
+    // x.addEventListener("mouseover" , mOver);
+    // x.addEventListener("mouseout" , mOute);
+    // x.addEventListener("click" , mClick);
+
+    // function mOver(){
+    //     document.getElementById('demo').innerHTML += "mouseover! <br />";
+    // }
+    // function mOute(){
+    //     document.getElementById('demo').innerHTML += "mouseout! <br />";
+    // }
+    // function mClick(){
+    //     document.getElementById('demo').innerHTML += "click! <br />";
+    // }
+    // //پایان مثال سوم
+
+    // //مثال چهارم
+
+    //     window.addEventListener("resize" , myfunction);
+    //     function myfunction(){
+    //         document.getElementById('demo1').innerHTML = window.innerWidth;//عرض صفحه را نمایش می دهد
+    //     }
+    //     window.addEventListener("resize" , myfunction2);
+    //     function myfunction2(){
+    //         document.getElementById('demo2').innerHTML = Math.random();//عدد تصادفی نمایش می دهد
+    //     }
+    //     //پایان مثال چهارم
+
+    window.addEventListener("resize" ,function(){
+        mywidth(window.innerWidth); 
+    } );
+    function mywidth(width){
+        document.getElementById('demo3').innerHTML = width;
+    }
+
+</script>
+
+</html>

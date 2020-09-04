@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop</title>
+</head>
+
+<body>
+    <button onclick="myfunction()">try it</button>
+    <p id="demo"></p>
+
+    <script>
+        function myfunction() {
+            var text = "";
+            if (confirm("press a button !")) {
+                text = "you press a button !";
+            } else {
+                text = "you press cancel";
+            }
+            document.getElementById('demo').innerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <!--مثال ششم-->
+    <style>
+        #box {
+            background-color: rgb(169, 45, 185);
+            width: 120px;
+            height: 20px;
+            padding: 40px;
+            color: rgb(252, 252, 252);
+        }
+
+        #click {
+            background-color: rgb(218, 37, 46);
+            width: 120px;
+            height: 20px;
+            padding: 40px;
+            color: rgb(252, 252, 252);
+        }
+    </style>
+    <!--پایان مثال ششم-->
+</head>
+
+<body onload="loadbody()">
+
+    <!--لود صفحه در لحظه ورود به آن صفحه-->
+    <button onclick="this.innerHTML='oops!' ">click me!</button>
+    <h2 onclick="changetext(this)">click me 2!</h2>
+    <h2 onclick="changetext(this)">click me 3!</h2>
+    <hr />
+    <!-- سوم مثال-->
+    <button onclick="displaydate()">the time is ?</button>
+    <p id="demo"></p>
+    <!--  مثال چهارم -->
+    <button id="mybtn">ali button</button>
+    <hr />
+    <!--مثال پنجم-->
+    name is: <input type="text" onchange="myfunction()" id="fname" />
+    <!---->
+    <hr />
+    <!--مثال ششم-->
+    <div id="box" onmouseover="mOven(this)" onmouseout="mOut(this)">mouse over me !</div>
+    <!--پایان مثال ششم-->
+    <hr />
+    <!--مثال هفتم-->
+    <div id="click" onmousedown="mDown(this)" onmouseup="mUp(this)" >click me!</div>
+    <!--پایان مثال هفتم-->
+    <script>
+         function mDown(obj){
+        obj.style.backgroundcolor= '#1ec5e5';
+        obj.innerHTML = "release me!";
+    }
+    function mUp(obj){
+        obj.style.backgroundcolor= "green";
+        obj.innerHTML = "thank you!";
+    }
+    </script>
+</body>
+<script>
+   
+    //مثال ششم
+    function mOven(obj) {
+        obj.innerHTML = "thankyou...";
+    }
+    function mOut(obj) {
+        obj.innerHTML = "mouse over me !";
+    }
+    //پایان مثال ششم
+    //مثال پنجم
+    function myfunction() {
+        var element = document.getElementById('fname');
+        element.value = element.value.toUpperCase();
+    }
+    //
+
+    function changetext(id) {
+        id.innerHTML = "ooooops!!!!";
+    }
+
+    function displaydate() {
+        document.getElementById('demo').innerHTML = Date();
+    }
+
+    document.getElementById('mybtn').onclick = salamali;
+    function salamali() {
+        alert('Hello ali nj');
+    }
+    function loadbody() {
+        //alert('load body ...');
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+</head>
+<body>
+    <button onclick="loadDoc()">click me!</button>
+    <p id="demo"></p>
+    <script>
+        function loadDoc(){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                document.getElementById('demo').innerHTML=this.responseText;
+            };
+            xhttp.open("GET" , "info32.text" , true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello ali</p>
+    <p>hello hamed</p>
+    <p>hello javad</p>
+    <p>hello goli</p>
+    <p id="demo"></p>
+    <button onclick="myfun()" >click me!</button>
+
+    <script>
+        var mycollection = document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML = mycollection[1].innerHTML;
+        alert(mycollection.length);
+        function myfun(){
+            var mycolle = document.getElementsByTagName("p");
+            var i;
+            for(i=0 ; i<mycolle.length ; i++){
+                mycolle[i].style.color = "red";  
+            }
+        }
+    </script>
+</body>
+</html>

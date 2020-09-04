@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--مثال اول و دوم
+    <div id="div1">
+        <p id="p1">this is paragraph .</p>
+        <p id="p2">this is new paragraph .</p>
+    </div>
+
+    <script>
+        var para = document.createElement("p");
+        var node = document.createTextNode("this is new");
+        para.appendChild(node);
+        var element = document.getElementById("div1");
+        // element.appendChild(para);
+        var child = document.getElementById('p2');
+        element.insertBefore(para, child);
+    </script>-->
+
+    <!--مثال سوم
+    <div id="div1">
+        <p id="p1">this is paragraph .</p>
+        <p id="p2">this is new paragraph .</p>
+    </div>
+    <script>
+        var element = document.getElementById('div1');
+        var child = document.getElementById('p1');
+        element.removeChild(child);
+    </script>-->
+    <!--مثال چهارم-->
+    <div id="div1">
+        <p id="p1">this is paragraph .</p>
+        <p id="p2">this is new paragraph .</p>
+    </div>
+    <script>
+        var element = document.getElementById('div1');
+        var child = document.getElementById('p1');
+        var para = document.createElement("p");
+        var node = document.createTextNode("this is new");
+        para.appendChild(node);
+        element.replaceChild(para , child);
+    </script>
+
+</body>
+
+</html>

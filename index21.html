@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nj {
+            color: slateblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  <p id="demo"></p> -->
+    <!-- <p>ali</p>
+    <p class="nj">javad</p>
+    <p>hamed</p> -->
+    <form action="" id="form1">
+        firstname: <input type="text" name="fname" value="ali" />
+        <br />
+        last name: <input type="text" name="lname" value="nj" />
+        <br /><br />
+        <input type="submit" value="click me" name="submit" />
+        <br />
+    </form>
+    <button type="button" onclick="myfunction()"  >try</button>
+    <p id="demo"></p>
+</body>
+
+<script>
+    function myfunction(){
+        var x = document.forms["form1"];
+        var text="";
+        for(var i=0 ; i<x.length ; i++){
+            text+=x.elements[i].value + "<br />";
+        }
+        document.getElementById('demo').innerHTML = text;
+    }
+
+    //مثال اول
+    // document.getElementById('demo').innerHTML= "hamed nj";
+
+    //مثال دوم
+   // var ps = document.getElementsByTagName("p");
+    //   for(n in ps){
+    //       console.log(ps[n].innerHTML);
+    //   }
+
+    //مثال سوم
+    // var D = document.getElementsByClassName('nj');
+    // console.log(D[0].innerHTML);
+
+    //مثال چهارم
+    // var g = document.querySelectorAll("p.nj");
+    // console.log(g[0].innerHTML);
+
+</script>
+
+</html>

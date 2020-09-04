@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کنترل خطا</title>
+</head>
+
+<body>
+    <!--<h2 id="result"></h2>-->
+    <p>pleas input the number between 5 and 10:</p>
+    <!--<input type="text" id="demo" />
+    <button type="button" onclick="myfunction()">test input</button>
+    <p id="p01"></p>
+   -->
+    <input type="text" id="demo" />
+    <button type="button" onclick="myfunction()">test me</button>
+    <p id="p01"></p>
+</body>
+<script>
+
+    function myfunction() {
+        var massage, x;
+        massage = document.getElementById('p01');
+        massage.innerHTML = "";
+
+        x = document.getElementById('demo').value;
+
+        try {
+            if( x == "" ) throw "empty";
+            if( x<5 ) throw "to low";
+            if( x>10 ) throw "to hight";
+            if(isNaN(x)) throw "not a number";
+            x = Number(x);
+        }
+        catch(err){
+            massage.innerHTML = "in put is " + err ;
+        }
+        finally{
+            document.getElementById('demo').value = "";
+        }
+    }
+
+
+
+    // function myfunction() {
+    //     var massage, x;
+    //     massage = document.getElementById('p01');
+    //     massage.innerHTML = "";
+
+    //     x = document.getElementById('demo').value;
+
+    //     try {
+    //         if (x == "") throw "empty";
+    //         if(isNaN(x)) throw "not a number";
+    //         x = Number(x);
+    //         if(x<5) throw "to low";
+    //         if(x>10) throw "to hight";
+    //     }
+    //     catch (err) {
+    //         massage.innerHTML = "input is " + err ;
+    //     }
+    //     finally {
+
+    //         document.getElementById('demo').value = "";
+    //     }
+
+    // }
+
+
+
+    // try
+    // {
+    //     hamednj("hamed nojavan");
+    // }
+    // catch(err)
+    // {
+    //     document.getElementById("result").innerHTML = err.massage;
+    // }
+    // finally
+    // {
+    //     alert("finally");
+    // }
+    // function hamednj(name){
+
+    // }
+</script>
+
+</html>
